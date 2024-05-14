@@ -1,0 +1,56 @@
+@keyframes feature-animated{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes feature-animated-reverse {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes page-download{
+    from{
+        transform: skew(20deg, 45deg)
+        
+    }
+    to{
+        transform: skew(0deg, 0deg);
+    }
+}
+
+.feature__animated{
+    animation: 1.5s feature-animated ease; 
+
+    @include mobile{
+        animation: none;
+    }
+}
+
+.feature__animated-reverse{
+    animation: 1.5s feature-animated-reverse ease;
+    @include mobile {
+            animation: none;
+        }
+}
+
+body{
+    animation: 1.5s page-download ease;
+    @include mobile {
+            animation: none;
+        }
+}

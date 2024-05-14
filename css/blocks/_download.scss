@@ -1,0 +1,25 @@
+.download{
+    min-height: 490px;
+    background-color: var(--color-accent);
+    display: flex;
+    align-items: center;
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title{
+        margin-bottom: 40px;
+        font-size: 72px;
+        font-weight: 800;
+        max-width: 650px;
+        text-align: center;
+
+        @include mobile{
+            font-size: 48px;
+        }
+    }
+}

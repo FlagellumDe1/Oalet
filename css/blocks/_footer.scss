@@ -1,0 +1,61 @@
+.footer{
+    background-color: var(--color-gray);
+    color: white;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    padding-block: 30px;
+
+    &__inner{
+        display: flex;
+        column-gap: 117px;
+        row-gap: 70px;
+        align-items: start;
+        justify-content: center;
+
+        @include desktop-S{
+            column-gap: 80px;
+        }
+
+        @include tablet{
+            column-gap: 30px;
+        }
+
+        @include mobile{
+            flex-wrap: wrap;
+        }
+    }
+
+    &__logo{
+        margin-bottom: 26px;
+        display: inline-block;
+    }
+
+    &__description{
+        margin-bottom: 38px;
+    }
+
+    &__button{
+        margin-bottom: 40px;
+    }
+
+   &__nav-list,
+   &__agreements,
+   &__socials,
+   &__contacts{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    &__nav-link,
+    &__agreements-link,
+    &__socials-link,
+    &__contacts-link{
+        white-space: nowrap;
+        
+        @include hover{
+            color: var(--color-white-hover);
+        }
+    }
+}

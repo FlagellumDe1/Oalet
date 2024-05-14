@@ -1,0 +1,59 @@
+.hero{
+    background: linear-gradient(90deg, white 59%, var(--color-blue) 59%);
+    min-height: 707px;
+    @include mobile{
+        background: white;
+    }
+
+    
+
+    &__inner{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: clamp(100px, 15.7vw, 227px);
+
+
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+            row-gap: 15px;
+        }
+    
+    }
+
+    &__body{
+        padding-top: clamp(50px, 9.8vw, 141px);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        
+        @include mobile{
+            padding-top: 0px;
+            display: contents;
+        }
+    }
+
+    &__title{
+        @include fluid-text(50, 72);
+
+        font-weight: 700;
+        font-family: 'sentient';
+        margin-bottom: 25px;
+
+        @include mobile {
+            text-align: center;
+            line-height: 120%;
+        }
+        
+    }
+
+    &__description{
+        margin-bottom: 41px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+
+}
+

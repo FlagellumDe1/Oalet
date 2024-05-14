@@ -1,0 +1,30 @@
+.partners{
+    background: black;
+    min-height: 246px;
+    display: flex;
+    align-items: center;
+    padding-block: 30px;
+
+    &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: clamp(80px, 11.8vw, 250px);
+
+        @include tablet{
+            column-gap: 30px ;
+            flex-wrap: wrap;
+            row-gap: 30px;
+        }
+
+        @include mobile-S{
+            flex-direction: column;
+        }
+        
+    }
+
+    &__item{
+        flex-shrink: 0;
+    }
+}

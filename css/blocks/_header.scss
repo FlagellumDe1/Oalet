@@ -1,0 +1,102 @@
+.header{
+
+    padding-block: 30px;
+    background: linear-gradient(90deg, white 59%, var(--color-blue) 59%);
+
+    @include mobile-S{
+        background: white;
+    }
+
+    @include mobile{
+        padding-block: 15px;
+    }
+
+   &__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 15px;
+   }
+
+   &__logo{
+    flex-shrink: 0;
+   }
+
+   &__body{
+    display: flex;
+    column-gap: clamp(30px, 6.94vw, 100px );
+    align-items: center;
+
+    @include mobile {
+        display: contents;
+    }
+   }
+
+   &__menu{
+    @include mobile{
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    &-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        column-gap: clamp(20px, 3.19vw, 46px);
+
+        @include mobile-S {
+            justify-content: center;
+            column-gap: 50px;
+        }
+    }
+
+    &-link{
+        font-weight: 700;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        text-wrap: nowrap;
+
+        &::after {
+                content: '';
+                display: block;
+                height: 2px;
+                width: 0px;
+                position: absolute;
+                left: 50%;
+                top: 80%;
+                translate: -50%;
+                background-color: currentColor;
+                transition-duration: 0.3s;
+            }
+        
+        @include hover {
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+
+   }
+
+   &__button{
+    background-color: white;
+
+    @include hover{
+        background-color: var(--color-white-hover);
+    }
+    @include mobile-S {
+            background-color: black;
+            color: white;
+
+            @include hover {
+                    background-color: var(--color-black-hover);
+                }
+        }
+
+   }
+}
