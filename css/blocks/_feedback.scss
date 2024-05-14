@@ -13,13 +13,14 @@
     &__slider{
         display: flex;
         column-gap: 30px;
-       animation: 30s slide infinite linear;
-       padding: 15px;
+        animation: 30s slide infinite linear;
+        padding-inline: 15px;
        
        @include mobile {
         flex-direction: column;
         row-gap: 30px;
         animation: none;
+        padding-inline: 0px;
 
         &:last-child{
             display: none;

@@ -691,13 +691,14 @@ body {
   -moz-column-gap: 30px;
        column-gap: 30px;
   animation: 30s slide infinite linear;
-  padding: 15px;
+  padding-inline: 15px;
 }
 @media (max-width: 767px) {
   .feedback__slider {
     flex-direction: column;
     row-gap: 30px;
     animation: none;
+    padding-inline: 0px;
   }
   .feedback__slider:last-child {
     display: none;
